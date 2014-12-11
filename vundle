@@ -37,8 +37,17 @@ Plugin 'sheerun/vim-polyglot'
 
 " Syntastic
 Plugin 'scrooloose/syntastic'
-" let g:syntastic_go_checkers = ['go', 'gofmt', 'golint']
-let g:syntastic_go_checkers = ['gofmt', 'golint']
+let g:syntastic_go_checkers = ['gofmt', 'gom', 'golint', 'govet']
+let g:syntastic_aggregate_errors = 1
+function! ToggleErrors()
+    if empty(filter(tabpagebuflist(), 'getbufvar(v:val, "&buftype") is# "quickfix"'))
+         " No location/quickfix list shown, open syntastic error location panel
+         Errors
+    else
+        lclose
+    endif
+endfunction
+nnoremap <silent> <Leader>e :<C-u>call ToggleErrors()<CR>
 
 " Go support
 Plugin 'fatih/vim-go'

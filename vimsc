@@ -20,7 +20,6 @@ inoremap <silent> <C-S> <ESC>:call SaveCTRLS()<CR>a
 " The <Leader> map
 let mapleader=","
 
-nmap <Leader>e :Errors<CR>
 
 " NerdTree-Tabs toggle
 noremap <F1> :NERDTreeTabsToggle<CR>

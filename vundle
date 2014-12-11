@@ -17,6 +17,17 @@ Plugin 'rking/ag.vim'
 let g:aghighlight=1
 let g:ag_mapping_message=0
 
+" NerdTree
+Plugin 'scrooloose/nerdtree'
+" Open NerdTree if no file specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" Auto close vim if only NerdTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" NerdTree-Tabs
+Plugin 'jistr/vim-nerdtree-tabs'
+
 " Tagbar
 " sudo pacman -S ctags
 Plugin 'majutsushi/tagbar'

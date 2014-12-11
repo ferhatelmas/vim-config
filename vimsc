@@ -22,6 +22,10 @@ let mapleader=","
 
 nmap <Leader>e :Errors<CR>
 
+" NerdTree-Tabs toggle
+noremap <F1> :NERDTreeTabsToggle<CR>
+inoremap <F1> <ESC>:NERDTreeTabsToggle<CR>
+
 " Redo
 noremap <S-u> <C-r>
 noremap <C-u> <C-r>

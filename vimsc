@@ -54,6 +54,8 @@ vmap <S-Right> <Right>
 " Moving faster
 map <C-Up> <Up><Up><Up><Up>
 map <C-Down> <Down><Down><Down><Down>
+imap <C-Up> <Up><Up><Up><Up>
+imap <C-Down> <Down><Down><Down><Down>
 
 " Tab navigation
 noremap <C-A-Left>   :tabprevious<CR>

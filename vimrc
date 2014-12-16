@@ -22,9 +22,13 @@ set number
 set autochdir
 
 " Backup directory
+" Don't forget to put '//' at the end
+" https://coderwall.com/p/sdhfug/vim-swap-backup-and-undo-files
 silent !mkdir ~/.vimbackup > /dev/null 2>&1
-set backupdir=~/.vimbackup
-set directory=~/.vimbackup
+set backupdir=~/.vimbackup//
+set directory=~/.vimbackup//
+set undodir=~/.vimbackup//
+set undofile
 set backupcopy=yes
 
 " Syntax

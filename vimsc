@@ -14,7 +14,9 @@ function! SaveCTRLS()
 endfunction
 nnoremap <silent> <C-S> :call SaveCTRLS()<CR>
 vnoremap <silent> <C-S> :call SaveCTRLS()<CR>
-inoremap <silent> <C-S> <ESC>:call SaveCTRLS()<CR>a
+inoremap <silent> <C-S> <ESC>:call SaveCTRLS()<CR>
+" To return into INSERT MODE (i can't get use to it)
+" inoremap <silent> <C-S> <ESC>:call SaveCTRLS()<CR>a
 
 
 " The <Leader> map

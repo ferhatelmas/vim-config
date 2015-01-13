@@ -11,6 +11,10 @@ call vundle#begin()
 " make ycm_support_libs
 Plugin 'Valloric/YouCompleteMe'
 
+" TESTING session
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
+
 " Ag
 " sudo pacman -S the_silver_searcher
 Plugin 'rking/ag.vim'
@@ -64,7 +68,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'vim-scripts/CSApprox'
 
 " Zenburn colors
-Plugin 'jnurmine/Zenburn'
+" Plugin 'jnurmine/Zenburn'
 
 " Coloresque
 Plugin 'gorodinskiy/vim-coloresque'
@@ -83,6 +87,7 @@ Plugin 'tomtom/tcomment_vim'
 
 " Airline plugin
 Plugin 'bling/vim-airline'
+let g:airline_theme='sol'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2

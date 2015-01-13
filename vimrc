@@ -29,12 +29,15 @@ set backupdir=~/.vimbackup//
 set directory=~/.vimbackup//
 set undodir=~/.vimbackup//
 set undofile
+set undoreload=10000
+set undolevels=1000
 set backupcopy=yes
 
 " Syntax
 set t_Co=256
 syntax on
-colorscheme zenburn
+"colorscheme zenburn
+colorscheme github
 
 " Highlight current line
 set cursorline
@@ -356,7 +359,6 @@ au BufRead vundle,vimsc,vimar set filetype=vim
 "" Airline
 "set laststatus=2
 "let g:airline_powerline_fonts = 1
-"let g:airline_theme='bubblegum'
 "
 "" Easymotion
 "let g:EasyMotion_do_mapping = 0 " Disable default mappings

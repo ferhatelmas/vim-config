@@ -1,11 +1,22 @@
 #!/bin/sh
-
 CURRENT_DIR=`pwd`
 
+rm -rf ~/.vim
 mkdir -p ~/.vim
-cd ~/.vim
+mkdir -p ~/.vimbackup
+mkdir -p ${CURRENT_DIR}/bundle
 
-ln -sf ${CURRENT_DIR}/vimrc vimrc
-ln -sf ${CURRENT_DIR}/vimsc vimsc
-ln -sf ${CURRENT_DIR}/vimar vimar
-ln -sf ${CURRENT_DIR}/vundle vundle
+ln -sf ${CURRENT_DIR}/* ~/.vim
+
+if [ ! -d "${CURREND_DIR}/Vundle.vim" ]; then
+  git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
+
+vim +PluginInstall +qall
+
+# Install YouCompleteMe Clang
+mkdir -p ~/.ycm_build; cd ~/.ycm_build;
+cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+make ycm_support_libs
+cd ${CURRENT_DIR}
+

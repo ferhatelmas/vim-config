@@ -14,6 +14,7 @@ Plugin 'Valloric/YouCompleteMe'
 " TESTING session
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
+:let g:session_autosave = 'yes'
 
 " Ag
 " sudo pacman -S the_silver_searcher

@@ -37,7 +37,8 @@ set backupcopy=yes
 set t_Co=256
 syntax on
 "colorscheme zenburn
-colorscheme github
+"colorscheme github
+colorscheme Benokai
 
 " Highlight current line
 set cursorline

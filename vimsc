@@ -75,6 +75,13 @@ imap <silent> <A-Down> <Esc><C-w>ji
 imap <silent> <A-Left> <Esc><C-w>hi
 imap <silent> <A-Right> <Esc><C-w>li
 
+" Resize split
+vmap <silent> - <C-w>-
+vmap <silent> + <C-w>+
+vmap <silent> * :vertical resize +1<CR>
+vmap <silent> / :vertical resize -1<CR>
+
+
 " Select ALL
 map <C-a> GVgg
 
@@ -84,6 +91,8 @@ nmap <S-Tab> <<
 xmap <Tab> >gv
 xmap <S-Tab> <gv
 
+" Replace undercursor
+:nnoremap <F2> :%s/\<<C-r><C-w>\>//g<Left><Left>
 
 """""""""""""""
 """ PLUGINS """

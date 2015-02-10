@@ -29,15 +29,6 @@ call vundle#begin()
 " make ycm_support_libs
 Plugin 'Valloric/YouCompleteMe'
 
-" IndentGuides
-Plugin 'nathanaelkane/vim-indent-guides'
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_guide_size = 2
-" hi IndentGuidesOdd  ctermbg=black
-" hi IndentGuidesEven ctermbg=darkgrey
-hi IndentGuidesOdd  ctermbg=white
-hi IndentGuidesEven ctermbg=lightgrey
-
 " Ag
 " sudo pacman -S the_silver_searcher
 Plugin 'rking/ag.vim'

@@ -29,6 +29,10 @@ call vundle#begin()
 " make ycm_support_libs
 Plugin 'Valloric/YouCompleteMe'
 
+" Zenburn colors
+Plugin 'jnurmine/Zenburn'
+
+
 " Ag
 " sudo pacman -S the_silver_searcher
 Plugin 'rking/ag.vim'
@@ -74,9 +78,6 @@ Plugin 'honza/vim-snippets'
 
 " CSApprox for GVIM compatibility colorscheme
 Plugin 'vim-scripts/CSApprox'
-
-" Zenburn colors
-" Plugin 'jnurmine/Zenburn'
 
 " Coloresque
 Plugin 'gorodinskiy/vim-coloresque'

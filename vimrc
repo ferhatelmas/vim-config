@@ -34,11 +34,15 @@ set undolevels=1000
 set backupcopy=yes
 
 " Syntax
-set t_Co=256
 syntax on
+set t_Co=256
+colorscheme zenburn
 "colorscheme zenburn
 "colorscheme github
-colorscheme Benokai
+"colorscheme Benokai
+"set background=dark
+"hi Normal ctermbg=White ctermfg=Black guifg=Black guibg=White
+"hi Normal ctermfg=252 ctermbg=none
 
 " Highlight current line
 set cursorline

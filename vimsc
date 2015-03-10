@@ -1,34 +1,35 @@
 " SWISS KEYBOARD FIX
 map à ^
 
+" Lock some keys
+noremap u <NOP>
+noremap! <PageUp> <NOP>
+noremap! <PageDown> <NOP>
+
 " Save with CTRL+S
 " Add this to your .zshrc to avoid the terminal controling ctrl+s for vim
 " # VIM Control flow for CTRL+S
 " alias vim="stty stop '' -ixoff ; vim"
 " # `Frozing' tty, so after any command terminal settings will be restored
 " ttyctl -f
-function! SaveCTRLS()
-  if &modified
-    confirm write
-  endif
-endfunction
+if !exists("*SaveCTRLS")
+  function! SaveCTRLS()
+    if &modified
+      confirm write
+    endif
+  endfunction
+endif
 nnoremap <silent> <C-S> :call SaveCTRLS()<CR>
 vnoremap <silent> <C-S> :call SaveCTRLS()<CR>
 inoremap <silent> <C-S> <ESC>:call SaveCTRLS()<CR>
 " To return into INSERT MODE (i can't get use to it)
 " inoremap <silent> <C-S> <ESC>:call SaveCTRLS()<CR>a
 
-
 " The <Leader> map
 let mapleader=","
 
-
-" NerdTree-Tabs toggle
-noremap <F1> :NERDTreeTabsToggle<CR>
-inoremap <F1> <ESC>:NERDTreeTabsToggle<CR>
-
 " Redo
-noremap <S-u> <C-r>
+noremap <S-u> u
 noremap <C-u> <C-r>
 
 " Split
@@ -37,11 +38,11 @@ noremap <Leader>v :<C-u>vsplit<CR>
 
 "" Copy/Paste/Cut
 noremap YY "+y<CR>
-noremap PP "+gP<CR>
+noremap PP <ESC>:set paste<CR>"+gP<CR><ESC>:set nopaste<CR>
 noremap XX "+x<CR>
 
 " Select a word
-nnoremap " *``
+nnoremap * *``
 
 " Selecting with SHIFT
 nmap <S-Up>    v<Up>
@@ -94,9 +95,16 @@ xmap <S-Tab> <gv
 " Replace undercursor
 :nnoremap <F2> :%s/\<<C-r><C-w>\>//g<Left><Left>
 
+" Close quickfix
+map <Leader>x :ccl<CR>
+
 """""""""""""""
 """ PLUGINS """
 """""""""""""""
+
+" NerdTree-Tabs toggle
+noremap <F1> :NERDTreeTabsToggle<CR>
+inoremap <F1> <ESC>:NERDTreeTabsToggle<CR>
 
 " EasyAlign
 vmap <Enter> <Plug>(EasyAlign)
@@ -117,3 +125,11 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsExpandTrigger="<NL>" " <C-Enter>
+
+" Ack
+map <leader>fw :Ack! <CR>
+map <leader>f :Ack!<space>
+" map <leader>fe ye:Ack! <CR>
+
+" Syntastic
+nnoremap <silent> <Leader>e :<C-u>call ToggleErrors()<CR>

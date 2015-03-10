@@ -2,7 +2,6 @@
 if !exists("*ReloadVIMRC")
     function ReloadVIMRC()
         so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
-        echomsg "Vim configuration reloaded"
     endfunction
 endif
 augroup myvimrc

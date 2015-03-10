@@ -21,6 +21,9 @@ set number
 " Set dir to current pwd
 set autochdir
 
+" Switch to a new tab for quickfix
+set switchbuf+=newtab
+
 " Backup directory
 " Don't forget to put '//' at the end
 " https://coderwall.com/p/sdhfug/vim-swap-backup-and-undo-files
@@ -36,16 +39,20 @@ set backupcopy=yes
 " Syntax
 syntax on
 set t_Co=256
-colorscheme zenburn
+let g:solarized_termcolors=256
+set background=light
+colorscheme solarized
+"colorscheme gruvbox
+"colorscheme dracula
 "colorscheme zenburn
 "colorscheme github
 "colorscheme Benokai
-"set background=dark
 "hi Normal ctermbg=White ctermfg=Black guifg=Black guibg=White
-"hi Normal ctermfg=252 ctermbg=none
+" hi Normal ctermfg=252 ctermbg=none
 
 " Highlight current line
 set cursorline
+"hi CursorLine ctermbg=239
 
 " Indentation
 set expandtab

@@ -14,7 +14,10 @@
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
 
+" Test
+Plugin 'facebook/vim-flow'
 
 "   ____                           _
 "  / ___| ___ _ __   ___ _ __ __ _| |
@@ -29,15 +32,9 @@ call vundle#begin()
 " make ycm_support_libs
 Plugin 'Valloric/YouCompleteMe'
 
-" Zenburn colors
-Plugin 'jnurmine/Zenburn'
-
-
-" Ag
-" sudo pacman -S the_silver_searcher
-Plugin 'rking/ag.vim'
-let g:aghighlight=1
-let g:ag_mapping_message=0
+" Ack (ag) config
+Plugin 'mileszs/ack.vim'
+let g:ackprg = 'ag --nogroup --nocolor --column --smart-case'
 
 " NerdTree
 Plugin 'scrooloose/nerdtree'
@@ -70,7 +67,6 @@ function! ToggleErrors()
         lclose
     endif
 endfunction
-nnoremap <silent> <Leader>e :<C-u>call ToggleErrors()<CR>
 
 " Snippets
 Plugin 'SirVer/ultisnips'
@@ -125,6 +121,9 @@ let g:rainbow_active = 1
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vimshell.vim'
 
+" Zeal shortcut
+Plugin 'KabbAmine/zeavim.vim'
+
 
 "      _                  ____            _       _
 "     | | __ ___   ____ _/ ___|  ___ _ __(_)_ __ | |_
@@ -171,6 +170,24 @@ Plugin 'fatih/vim-go'
 " HTML AutoCloseTag
 Plugin 'amirh/HTML-AutoCloseTag'
 
+"    ____       _            ____       _
+"   / ___| ___ | | ___  _ __/ ___|  ___| |__   ___ _ __ ___   ___
+"   | |   / _ \| |/ _ \| '__\___ \ / __| '_ \ / _ \ '_ ` _ \ / _ \
+"   | |__| (_) | | (_) | |   ___) | (__| | | |  __/ | | | | |  __/
+"    \____\___/|_|\___/|_|  |____/ \___|_| |_|\___|_| |_| |_|\___|
+"
+
+" Solarized
+Plugin 'altercation/vim-colors-solarized'
+
+" Gruvbox
+Plugin 'morhetz/gruvbox'
+
+" Zenburn colors
+Plugin 'jnurmine/Zenburn'
+
+" Dracula colors
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
 " Deinit Vundle
 call vundle#end()

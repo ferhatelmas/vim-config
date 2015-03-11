@@ -1,7 +1,7 @@
 #!/bin/sh
 CURRENT_DIR=`pwd`
 
-rm -rf ~/.vim
+mv ~/.vim ~/.vim.old
 mkdir -p ~/.vim
 mkdir -p ~/.vimbackup
 mkdir -p ${CURRENT_DIR}/bundle

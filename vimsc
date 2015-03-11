@@ -66,6 +66,14 @@ noremap <C-A-Right>  :tabnext<CR>
 inoremap <C-A-Left>  <Esc>:tabprevious<CR>i
 inoremap <C-A-Right> <Esc>:tabnext<CR>i
 
+" Moving lines
+nnoremap <PageDown> :m .+1<CR>==
+nnoremap <PageUp> :m .-2<CR>==
+inoremap <PageDown> <Esc>:m .+1<CR>==gi
+inoremap <PageUp> <Esc>:m .-2<CR>==gi
+vnoremap <PageDown> :m '>+1<CR>gv=gv
+vnoremap <PageUp> :m '<-2<CR>gv=gv
+
 " Navigation in splits
 nmap <silent> <A-Up> <C-w>k
 nmap <silent> <A-Down> <C-w>j
@@ -81,7 +89,6 @@ vmap <silent> - <C-w>-
 vmap <silent> + <C-w>+
 vmap <silent> * :vertical resize +1<CR>
 vmap <silent> / :vertical resize -1<CR>
-
 
 " Select ALL
 map <C-a> GVgg

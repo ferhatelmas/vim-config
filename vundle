@@ -54,6 +54,9 @@ Plugin 'majutsushi/tagbar'
 " A collection of language packs.
 Plugin 'sheerun/vim-polyglot'
 
+" Multiline cursors
+Plugin 'terryma/vim-multiple-cursors'
+
 " Syntastic
 Plugin 'scrooloose/syntastic'
 let g:syntastic_aggregate_errors = 1
@@ -71,6 +74,20 @@ endfunction
 " Snippets
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+
+" Super Tab to trigger ultisnips via <tab>
+Plugin 'ervandew/supertab'
+let g:SuperTabCrMapping = 0
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+"
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " CSApprox for GVIM compatibility colorscheme
 Plugin 'vim-scripts/CSApprox'

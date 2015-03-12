@@ -189,6 +189,22 @@ Plugin 'jnurmine/Zenburn'
 " Dracula colors
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
+"  __  __            _    ____
+"  |  \/  | __ _ _ __| | _|  _ \  _____      ___ __
+"  | |\/| |/ _` | '__| |/ / | | |/ _ \ \ /\ / / '_ \
+"  | |  | | (_| | |  |   <| |_| | (_) \ V  V /| | | |
+"  |_|  |_|\__,_|_|  |_|\_\____/ \___/ \_/\_/ |_| |_|
+
+" Live preview for markdown
+" npm install -g livedown
+Plugin 'shime/vim-livedown'
+" should markdown preview get shown automatically upon opening markdown buffer
+let g:livedown_autorun = 1
+" should the browser window pop-up upon previewing
+let g:livedown_open = 1
+" the port on which Livedown server will run
+let g:livedown_port = 1337
+
 " Deinit Vundle
 call vundle#end()
 filetype plugin indent on

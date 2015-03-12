@@ -3,8 +3,8 @@ map à ^
 
 " Lock some keys
 noremap u <NOP>
-noremap! <PageUp> <NOP>
-noremap! <PageDown> <NOP>
+" noremap! <PageUp> <NOP>
+" noremap! <PageDown> <NOP>
 
 " Save with CTRL+S
 " Add this to your .zshrc to avoid the terminal controling ctrl+s for vim
@@ -61,10 +61,10 @@ imap <C-Up> <Up><Up><Up><Up>
 imap <C-Down> <Down><Down><Down><Down>
 
 " Tab navigation
-noremap <C-A-Left>   :tabprevious<CR>
-noremap <C-A-Right>  :tabnext<CR>
-inoremap <C-A-Left>  <Esc>:tabprevious<CR>i
-inoremap <C-A-Right> <Esc>:tabnext<CR>i
+noremap  <C-Left>   :tabprevious<CR>
+noremap  <C-Right>  :tabnext<CR>
+inoremap <C-Left>  <Esc>:tabprevious<CR>
+inoremap <C-Right> <Esc>:tabnext<CR>
 
 " Moving lines
 nnoremap <PageDown> :m .+1<CR>==
@@ -75,14 +75,14 @@ vnoremap <PageDown> :m '>+1<CR>gv=gv
 vnoremap <PageUp> :m '<-2<CR>gv=gv
 
 " Navigation in splits
-nmap <silent> <A-Up> <C-w>k
-nmap <silent> <A-Down> <C-w>j
-nmap <silent> <A-Left> <C-w>h
-nmap <silent> <A-Right> <C-w>l
-imap <silent> <A-Up> <Esc><C-w>ki
-imap <silent> <A-Down> <Esc><C-w>ji
-imap <silent> <A-Left> <Esc><C-w>hi
-imap <silent> <A-Right> <Esc><C-w>li
+nmap <silent> <S-A-Up> <C-w>k
+nmap <silent> <S-A-Down> <C-w>j
+nmap <silent> <S-A-Left> <C-w>h
+nmap <silent> <S-A-Right> <C-w>l
+imap <silent> <S-A-Up> <Esc><C-w>ki
+imap <silent> <S-A-Down> <Esc><C-w>ji
+imap <silent> <S-A-Left> <Esc><C-w>hi
+imap <silent> <S-A-Right> <Esc><C-w>li
 
 " Resize split
 vmap <silent> - <C-w>-

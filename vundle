@@ -187,6 +187,8 @@ Plugin 'fatih/vim-go'
 " HTML AutoCloseTag
 Plugin 'amirh/HTML-AutoCloseTag'
 
+" Emmet support
+Plugin 'mattn/emmet-vim'
 
 "    _____       _   _
 "   |  __ \     | | | |

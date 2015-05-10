@@ -157,6 +157,11 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'othree/tern_for_vim_coffee'
 
+Plugin 'mxw/vim-jsx'
+" Enable jsx for js files
+let g:jsx_ext_required = 0
+" Require pragma (@jsx React.DOM) to enable
+" let g:jsx_pragma_required = 1
 
 "  _____         _   _
 " |_   _|__  ___| |_(_)_ __   __ _

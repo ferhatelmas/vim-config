@@ -62,6 +62,7 @@ Plugin 'scrooloose/syntastic'
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_go_go_exec = 'gom'
 let g:syntastic_go_checkers = ['gofmt', 'go', 'golint', 'govet']
+let g:syntastic_javascript_checkers = ['eslint']
 function! ToggleErrors()
     if empty(filter(tabpagebuflist(), 'getbufvar(v:val, "&buftype") is# "quickfix"'))
          " No location/quickfix list shown, open syntastic error location panel

@@ -183,6 +183,7 @@ Plugin 'xolox/vim-session'
 "                            |___/
 " Go support
 Plugin 'fatih/vim-go'
+let g:go_fmt_command = "goimports"
 
 "  _   _ _____ __  __ _
 " | | | |_   _|  \/  | |

@@ -140,3 +140,9 @@ map <leader>f :Ack!<space>
 
 " Syntastic
 nnoremap <silent> <Leader>e :<C-u>call ToggleErrors()<CR>
+
+" DevDocs
+nmap <leader>d <Plug>(devdocs-under-cursor)
+
+" vim-go
+nmap <leader>g :GoDef <CR>

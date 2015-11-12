@@ -184,8 +184,7 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-" let's start with simple
-let g:go_metalinter_command = 'gometalinter ./...'
+let g:go_metalinter_command = 'gometalinter --cyclo-over=10 --deadline=25s--sort=path --min-confidence=.90 -j 4 ./...'
 
 "  _   _ _____ __  __ _
 " | | | |_   _|  \/  | |

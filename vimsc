@@ -3,8 +3,6 @@ map à ^
 
 " Lock some keys
 noremap u <NOP>
-" noremap! <PageUp> <NOP>
-" noremap! <PageDown> <NOP>
 
 " Save with CTRL+S
 " Add this to your .zshrc to avoid the terminal controling ctrl+s for vim

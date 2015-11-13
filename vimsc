@@ -158,4 +158,4 @@ au FileType go nmap <leader>gb <Plug>(go-doc-browser)
 au FileType go nmap <leader>i <Plug>(go-info)
 au FileType go nmap <leader>ed <Plug>(go-rename)
 
-au FileType go nmap <leader>gm <Plug>(go-metalinter)
+au FileType go nmap <leader>gx <Plug>(go-metalinter)

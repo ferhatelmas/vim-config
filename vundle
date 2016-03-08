@@ -99,7 +99,8 @@ Plugin 'sjl/gundo.vim'
 Plugin 'tomtom/tcomment_vim'
 
 " Airline plugin
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 let g:airline_theme='tomorrow'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1

@@ -52,7 +52,7 @@ let g:syntastic_go_checkers = ['go', 'gofmt', 'golint', 'govet', 'gonyet', 'goty
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_scss_checkers = ['scss_lint']
 let g:syntastic_less_use_less_lint = 1
-let g:syntastic_less_options = "-l --no-color"
+let g:syntastic_less_lessc_args = "-l --no-color"
 function! ToggleErrors()
     if empty(filter(tabpagebuflist(), 'getbufvar(v:val, "&buftype") is# "quickfix"'))
          " No location/quickfix list shown, open syntastic error location panel

@@ -159,3 +159,7 @@ au FileType go nmap <leader>i <Plug>(go-info)
 au FileType go nmap <leader>ed <Plug>(go-rename)
 
 au FileType go nmap <leader>gx <Plug>(go-metalinter)
+
+" stylefmt
+nnoremap <silent> <leader>cs :Stylefmt<CR>
+vnoremap <silent> <leader>cs :StylefmtVisual<CR>

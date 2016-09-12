@@ -7,12 +7,6 @@ Plugin 'gmarik/Vundle.vim'
 " Test
 Plugin 'facebook/vim-flow'
 
-"   ____                           _
-"  / ___| ___ _ __   ___ _ __ __ _| |
-" | |  _ / _ \ '_ \ / _ \ '__/ _` | |
-" | |_| |  __/ | | |  __/ | | (_| | |
-"  \____|\___|_| |_|\___|_|  \__,_|_|
-"
 " You complete me, installation:
 " install clang
 " cd ~;mkdir .ycm_build; cd .ycm_build;
@@ -137,13 +131,6 @@ Plugin 'Shougo/vimshell.vim'
 " DevDocs shortcut
 Plugin 'rhysd/devdocs.vim'
 
-
-"      _                  ____            _       _
-"     | | __ ___   ____ _/ ___|  ___ _ __(_)_ __ | |_
-"  _  | |/ _` \ \ / / _` \___ \ / __| '__| | '_ \| __|
-" | |_| | (_| |\ V / (_| |___) | (__| |  | | |_) | |_
-"  \___/ \__,_| \_/ \__,_|____/ \___|_|  |_| .__/ \__|
-"                                          |_|
 Plugin 'kchmck/vim-coffee-script'
 
 " JavaScript analyzer VIM
@@ -159,23 +146,11 @@ let g:jsx_ext_required = 0
 " Require pragma (@jsx React.DOM) to enable
 " let g:jsx_pragma_required = 1
 
-"  _____         _   _
-" |_   _|__  ___| |_(_)_ __   __ _
-"   | |/ _ \/ __| __| | '_ \ / _` |
-"   | |  __/\__ \ |_| | | | | (_| |
-"   |_|\___||___/\__|_|_| |_|\__, |
-"                            |___/
 " TESTING session
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 let g:session_autosave = 'yes'
 
-"   ____       _
-"  / ___| ___ | | __ _ _ __   __ _
-" | |  _ / _ \| |/ _` | '_ \ / _` |
-" | |_| | (_) | | (_| | | | | (_| |
-"  \____|\___/|_|\__,_|_| |_|\__, |
-"                            |___/
 " Go support
 Plugin 'fatih/vim-go'
 let g:go_fmt_command = "goimports"
@@ -186,37 +161,14 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_metalinter_command = 'gometalinter --cyclo-over=10 --deadline=25s --sort=path --min-confidence=.90 -j 4 ./...'
 
-"  _   _ _____ __  __ _
-" | | | |_   _|  \/  | |
-" | |_| | | | | |\/| | |
-" |  _  | | | | |  | | |___
-" |_| |_| |_| |_|  |_|_____|
-"
 " HTML AutoCloseTag
 Plugin 'amirh/HTML-AutoCloseTag'
 
 " Emmet support
 Plugin 'mattn/emmet-vim'
 
-"    _____       _   _
-"   |  __ \     | | | |
-"   | |__) |   _| |_| |__   ___  _ __
-"   |  ___/ | | | __| '_ \ / _ \| '_ \
-"   | |   | |_| | |_| | | | (_) | | | |
-"   |_|    \__, |\__|_| |_|\___/|_| |_|
-"           __/ |
-"           |___/
-
 " Python support
 Plugin 'klen/python-mode'
-
-
-"    ____       _            ____       _
-"   / ___| ___ | | ___  _ __/ ___|  ___| |__   ___ _ __ ___   ___
-"   | |   / _ \| |/ _ \| '__\___ \ / __| '_ \ / _ \ '_ ` _ \ / _ \
-"   | |__| (_) | | (_) | |   ___) | (__| | | |  __/ | | | | |  __/
-"    \____\___/|_|\___/|_|  |____/ \___|_| |_|\___|_| |_| |_|\___|
-"
 
 " Solarized
 Plugin 'altercation/vim-colors-solarized'
@@ -230,12 +182,6 @@ Plugin 'jnurmine/Zenburn'
 " Dracula colors
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
-"  __  __            _    ____
-"  |  \/  | __ _ _ __| | _|  _ \  _____      ___ __
-"  | |\/| |/ _` | '__| |/ / | | |/ _ \ \ /\ / / '_ \
-"  | |  | | (_| | |  |   <| |_| | (_) \ V  V /| | | |
-"  |_|  |_|\__,_|_|  |_|\_\____/ \___/ \_/\_/ |_| |_|
-
 " Live preview for markdown
 " npm install -g livedown
 Plugin 'shime/vim-livedown'
@@ -245,6 +191,9 @@ let g:livedown_autorun = 1
 let g:livedown_open = 1
 " the port on which Livedown server will run
 let g:livedown_port = 1337
+
+" npm i -g stylefmt
+Plugin 'kewah/vim-stylefmt'
 
 " Deinit Vundle
 call vundle#end()

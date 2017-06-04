@@ -20,5 +20,3 @@ Convention
 - vimrc: is your main configuration vim file.
 - vimsc: is the file were you should define customized shortcuts.
 - vundle: is the file regrouping all the plugins that vundle should install and their specific configuration options.
-
-

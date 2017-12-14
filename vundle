@@ -39,14 +39,22 @@ Plugin 'sheerun/vim-polyglot'
 " Multiline cursors
 Plugin 'terryma/vim-multiple-cursors'
 
-" Syntastic
-Plugin 'scrooloose/syntastic'
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_go_checkers = ['go', 'gofmt', 'golint', 'govet', 'gotype']
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_scss_checkers = ['scss_lint']
-let g:syntastic_less_use_less_lint = 1
-let g:syntastic_less_lessc_args = "-l --no-color"
+" Ale
+Plugin 'w0rp/ale'
+" let g:ale_fixers = {
+"   \ 'javascript': ['eslint', 'standard'],
+"   \ 'go': ['go', 'gofmt', 'golint', 'govet', 'gotype']
+"   \}
+let g:ale_fix_on_save = 1
+let g:ale_sign_column_always = 1
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+
+" let g:syntastic_aggregate_errors = 1
+" let g:syntastic_javascript_checkers = ['eslint', 'standard', 'prettier_standard']
+" let g:syntastic_scss_checkers = ['scss_lint']
+" let g:syntastic_less_use_less_lint = 1
+" let g:syntastic_less_lessc_args = "-l --no-color"
 function! ToggleErrors()
     if empty(filter(tabpagebuflist(), 'getbufvar(v:val, "&buftype") is# "quickfix"'))
          " No location/quickfix list shown, open syntastic error location panel
@@ -168,7 +176,7 @@ let g:go_metalinter_autosave = 0
 let g:go_metalinter_command = 'gometalinter --cyclo-over=10 --deadline=10s --sort=path --min-confidence=.90 -j 4 --aggregate ./...'
 let g:go_auto_type_info = 1
 let g:go_auto_sameids = 1
-autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=2 shiftwidth=2
 
 " HTML AutoCloseTag
 Plugin 'amirh/HTML-AutoCloseTag'

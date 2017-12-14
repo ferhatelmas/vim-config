@@ -1,5 +1,6 @@
 " VIM
 set nocompatible
+set shell=/bin/bash
 
 " Loading shortcuts
 so ~/.vim/vimsc

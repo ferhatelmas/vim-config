@@ -169,9 +169,6 @@ let g:go_auto_type_info = 1
 let g:go_auto_sameids = 1
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=2 shiftwidth=2
 
-" HTML AutoCloseTag
-Plugin 'amirh/HTML-AutoCloseTag'
-
 " Emmet support
 Plugin 'mattn/emmet-vim'
 

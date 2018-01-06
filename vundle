@@ -171,6 +171,9 @@ let g:go_metalinter_command = 'gometalinter --cyclo-over=10 --deadline=10s --sor
 let g:go_auto_type_info = 1
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=2 shiftwidth=2
 
+" Automatic test generation
+Plugin 'buoto/gotests-vim'
+
 " Emmet support
 Plugin 'mattn/emmet-vim'
 

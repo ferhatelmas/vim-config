@@ -144,6 +144,7 @@ Plugin 'kchmck/vim-coffee-script'
 " 'npm install' and 'npm install tern-coffee'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'othree/tern_for_vim_coffee'
+Plugin 'yardnsm/vim-import-cost'
 
 Plugin 'mxw/vim-jsx'
 " Enable jsx for js files

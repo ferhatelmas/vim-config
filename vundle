@@ -4,9 +4,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
-" Test
-Plugin 'facebook/vim-flow'
-
 " You complete me, installation:
 " install clang
 " cd ~;mkdir .ycm_build; cd .ycm_build;
@@ -80,9 +77,6 @@ let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
-" CSApprox for GVIM compatibility colorscheme
-Plugin 'vim-scripts/CSApprox'
-
 " Coloresque
 Plugin 'gorodinskiy/vim-coloresque'
 
@@ -139,19 +133,9 @@ Plugin 'rhysd/devdocs.vim'
 
 Plugin 'kchmck/vim-coffee-script'
 
-" JavaScript analyzer VIM
-" Don't forget to go into the directory
-" 'bundle/tern_for_vim' and make a
-" 'npm install' and 'npm install tern-coffee'
-Plugin 'marijnh/tern_for_vim'
-Plugin 'othree/tern_for_vim_coffee'
-Plugin 'yardnsm/vim-import-cost'
-
 Plugin 'mxw/vim-jsx'
 " Enable jsx for js files
 let g:jsx_ext_required = 0
-" Require pragma (@jsx React.DOM) to enable
-" let g:jsx_pragma_required = 1
 
 " TESTING session
 Plugin 'xolox/vim-misc'

@@ -103,7 +103,7 @@ set laststatus=2
 " Full path fuzzy file, buffer, mru, tag, ... finder.
 Plugin 'kien/ctrlp.vim'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v(node_modules|bower_components|public|GoDeps|package|vendor|_vendor|\.(git|hg|svn))$',
+  \ 'dir':  '\v(nogit|node_modules|bower_components|public|GoDeps|package|vendor|_vendor|\.(git|hg|svn))$',
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
 
@@ -130,8 +130,6 @@ Plugin 'Shougo/vimshell.vim'
 
 " DevDocs shortcut
 Plugin 'rhysd/devdocs.vim'
-
-Plugin 'kchmck/vim-coffee-script'
 
 Plugin 'mxw/vim-jsx'
 " Enable jsx for js files
